@@ -16,10 +16,10 @@ class SongsController < ApplicationController
   end
 
   post "/songs" do
-    new_song = Song.create(params)
+    @song_title = params["song"]
+    binding.pry
     redirect "/songs"
   end
 
-  binding.pry
 
 end
